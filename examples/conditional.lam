@@ -1,0 +1,9 @@
+let true := λx. λy. x
+let false := λx. λy. y
+let ifThenElse := λp. λa. λb. p a b
+let and := λp. λq. p q p
+let or := λp. λq. p p q
+let not := λp. p false true
+let zero := λs. λz. z
+let one := λs. λz. s z
+let main := ifThenElse (and true false) zero one

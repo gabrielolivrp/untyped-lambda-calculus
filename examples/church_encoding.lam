@@ -1,0 +1,11 @@
+let pred := λn. λf. λx. n (λg. λh. h (g f)) (λu. x) (λu. u)
+let succ := λn. λa. λk. a (n a k)
+let zero := λs.λz. z
+let one := succ zero
+let two := succ one
+let three := succ two
+let mult := λm. λn. λf. m (n f)
+let sub := λm. λn. n pred m
+let pow := λb. λe. e b
+let add := λm. λn. m succ n
+let main := mult (sub three two) three

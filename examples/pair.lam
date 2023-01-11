@@ -1,0 +1,14 @@
+let true := λx.λy. x
+let false := λx.λy. y
+let pair := λx. λy. λf. f x y
+let first := λp. p true
+let second := λp.p false
+let succ := λn. λs. λz. s (n s z)
+let zero := λs.λz. z
+let one := succ zero
+let two := succ one
+let three := succ two
+let four := succ three
+let p1 := pair one two
+let p2 := pair four three
+let main := second p1
